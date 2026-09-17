@@ -9,7 +9,7 @@ function dailyLog174() {
   const report = resources.map(resource => ({
     name: resource.name,
     usage: `${((resource.used / resource.capacity) * 100).toFixed(1)}%`,
-    remaining: resource.capacity - resource.use
+    remaining: resource.capacity - resource.used
   }));
 
   const mostUtilized = resources.reduce((max, resource) =>
